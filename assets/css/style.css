@@ -221,7 +221,7 @@ img {
 
 /* COUNTER */
 #counter {
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)), url(../images/counter.jpg);
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)), url(../images/1\ \(22\).jpg);
     background-position: center;
     background-size: cover;
 }
