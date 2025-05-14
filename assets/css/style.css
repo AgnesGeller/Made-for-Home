@@ -218,6 +218,121 @@ img {
     background-color: rgba(255,255,255,0.2);
     color: white;
 }
+/* Alap stílusok */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Vízszintes görgetés kikapcsolása */
+}
+
+header {
+  background-color: #57aadf;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  width: 100%; /* Igazodik a képernyő szélességéhez */
+  max-width: 600px; /* Maximum szélesség nagyobb képernyőkhöz */
+  margin: 0 auto; /* Középre igazítás */
+  padding: 10px; /* Belső margó a széleken */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Tartalom és margók számítása */
+}
+
+label, select, input, button {
+  display: block;
+  width: 100%; /* Minden elem teljes szélességet foglal */
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+select {
+  box-sizing: border-box; /* Pontos méretezés */
+  appearance: menulist-button; /* Nyilak megjelenítése minden böngészőben */
+  cursor: pointer; /* Kattinthatóság biztosítása */
+  background-color: white; /* Háttér beállítása */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Szépített sarok */
+}
+
+input {
+  box-sizing: border-box; /* Pontos méretezés */
+  padding: 10px;
+}
+
+button {
+  background-color: #610404;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ae0404;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+#totalCost {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #140586;
+  text-align: center;
+}
+
+/* Reszponzív stílusok */
+
+/* Mobiltelefonokra és kisebb képernyőkre (max. 480px) */
+@media (max-width: 480px) {
+  main {
+    padding: 5px; /* Csökkentsd a belső margókat */
+  }
+
+  form input, form select, form button {
+    font-size: 0.9rem; /* Csökkentsd a betűméretet */
+  }
+
+  select {
+    padding: 12px; /* Mobilon nagyobb érintőfelület */
+    background-color: white; /* Világos háttér nyilakhoz */
+    border: 1px solid #ccc;
+    appearance: menulist; /* Mobil nyilak erőltetése */
+  }
+
+  label {
+    font-size: 0.85rem; /* Feliratok kisebb méretűek legyenek */
+  }
+
+  button {
+    padding: 8px; /* Csökkentett méret a mobilra */
+  }
+}
+
+/* Tabletekhez és közepes képernyőkhöz (max. 768px) */
+@media (max-width: 768px) {
+  main {
+    padding: 15px; /* Kényelmesebb margók tableteken */
+  }
+
+  form input, form select, form button {
+    font-size: 1rem; /* Alap méret tableteken */
+  }
+}
 
 /* COUNTER */
 #counter {

@@ -38,6 +38,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#calculator">Price Calculator</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
@@ -144,6 +147,35 @@
             </div>
         </div>
     </section>
+
+    <!-- CALCULATOR -->
+
+      <header>
+    <h1>Price Calculator</h1>
+  </header>
+
+  <main>
+    <form id="calculator">
+      <label for="workType">Service Type:</label>
+      <select id="workType">
+        <!-- Opciók dinamikusan generálódnak JavaScript-ből -->
+      </select>
+
+      <label for="area">Terület mérete (m²):</label>
+      <input type="number" id="area" placeholder="Adja meg a négyzetmétert" required min="0">
+
+      <label for="count">Darabszám:</label>
+      <input type="number" id="count" placeholder="Adja meg a darabszámot" required min="0">
+
+      <button type="button" onclick="addItem()">Kosárba helyezés</button>
+    </form>
+
+    <h3>Kiválasztott tételek:</h3>
+    <ul id="itemList"></ul>
+
+    <h3>Végösszeg:</h3>
+    <p id="totalCost">0 HUF</p>
+  </main>
 
     
     <!-- CONTACT -->
