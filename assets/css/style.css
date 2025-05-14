@@ -247,6 +247,9 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box; /* Tartalom és margók számítása */
 }
+h5 {
+  font-size: 10px;
+}
 
 label, select, input, button {
   display: block;
