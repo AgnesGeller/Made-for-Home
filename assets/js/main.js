@@ -106,7 +106,7 @@ updateClock(); // initial call to display the clock immediately
 // Árak (Excel adatok alapján szerkeszthető)
 const prices = [
     { id: "mowing", name: "Regular Domestic Cleaning", unit: "h", price: 17},
-    { id: "planting", name: "Weekly Cleaning", unit: "pc", price: 17},
+    { id: "planting", name: "Weekly Cleaning", unit: "h", price: 17},
     { id: "gravel", name: "Fortnightly Cleaning", unit: "h", price: 19},
     { id: "paving", name: "One-Off and Deep Cleanin", unit: "h", price: 23},
     { id: "weeding", name: "End of Tenancy Cleaning", unit: "h", price: 25},
