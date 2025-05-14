@@ -105,12 +105,12 @@ updateClock(); // initial call to display the clock immediately
 
 // Árak (Excel adatok alapján szerkeszthető)
 const prices = [
-    { id: "mowing", name: "Regular Domestic Cleaning", unit: "m²", price: 17},
+    { id: "mowing", name: "Regular Domestic Cleaning", unit: "h", price: 17},
     { id: "planting", name: "Weekly Cleaning", unit: "pc", price: 17},
-    { id: "gravel", name: "Fortnightly Cleaning", unit: "m³", price: 19},
-    { id: "paving", name: "One-Off and Deep Cleanin", unit: "m²", price: 23},
-    { id: "weeding", name: "End of Tenancy Cleaning", unit: "m²", price: 25},
-    { id: "weeding", name: "Spring Cleaning", unit: "m²", price: 26},
+    { id: "gravel", name: "Fortnightly Cleaning", unit: "h", price: 19},
+    { id: "paving", name: "One-Off and Deep Cleanin", unit: "h", price: 23},
+    { id: "weeding", name: "End of Tenancy Cleaning", unit: "h", price: 25},
+    { id: "weeding", name: "Spring Cleaning", unit: "h", price: 26},
     // További tételek hozzáadhatók...
   ];
   
@@ -143,11 +143,11 @@ const prices = [
     const task = prices.find(item => item.id === workTypeId);
   
     let cost = 0;
-    if (task.unit === "m²") {
+    if (task.unit === "h") {
       cost = task.price * area; // Négyzetméter alapú számítás
     } else if (task.unit === "piece") {
       cost = task.price * count; // Darabszám alapú számítás
-    } else if (task.unit === "m³") {
+    } else if (task.unit === "h") {
       cost = task.price * area; // Köbméter alapú számítás
     } else {
       alert("Unsupported unit.");
@@ -166,7 +166,7 @@ const prices = [
   
     cart.forEach((item, index) => {
       const listItem = document.createElement("li");
-      listItem.textContent = `${item.name} - ${item.area ? `${item.area} m²` : ""} ${item.count ? `${item.count} pc` : ""} = ${item.cost} GBP`;
+      listItem.textContent = `${item.name} - ${item.area ? `${item.area} h` : ""} ${item.count ? `${item.count} pc` : ""} = ${item.cost} GBP`;
   
       // Eltávolítás gomb hozzáadása
       const deleteButton = document.createElement("button");
