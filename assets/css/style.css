@@ -45,8 +45,8 @@ img {
 }
 
 .section-padding {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .theme-shadow {
@@ -160,7 +160,7 @@ img {
     width: 60px;
     height: 4px;
     background-color: var(--c-brand);
-    margin: 16px auto 24px auto;
+    margin: auto auto auto auto;
 }
 
 .section-title p {
@@ -226,45 +226,6 @@ img {
     background-size: cover;
 }
 
-
-/* REVIEW */
-.review small {
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--c-brand);
-}
-
-.review-head {
-    position: relative;
-}
-
-.review-head::after {
-    content: "";
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    bottom: -14px;
-    background-color: white;
-    transform: rotate(45deg);
-}
-
-/* TEAM */
-.team-member-content {
-    background-color: var(--c-brand);
-    position: absolute;
-    bottom: -24px;
-    left: 50%;
-    width: calc(100% - 50px);
-    transform: translateX(-50%);
-    padding: 24px;
-    transition: var(--transition);
-    opacity: 0;
-}
-
-.team-member:hover .team-member-content {
-    opacity: 1;
-    bottom: 24px;
-}
 
 /* CONTACT */
 #contact {
