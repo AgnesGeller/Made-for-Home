@@ -106,7 +106,7 @@ updateClock(); // initial call to display the clock immediately
 // Árak (Excel adatok alapján szerkeszthető)
 const prices = [
     { id: "mowing", name: "Regular Domestic Cleaning", unit: "m²", price: 17},
-    { id: "planting", name: "Weekly Cleaning", unit: "db", price: 17},
+    { id: "planting", name: "Weekly Cleaning", unit: "pc", price: 17},
     { id: "gravel", name: "Fortnightly Cleaning", unit: "m³", price: 19},
     { id: "paving", name: "One-Off and Deep Cleanin", unit: "m²", price: 23},
     { id: "weeding", name: "End of Tenancy Cleaning", unit: "m²", price: 25},
@@ -136,7 +136,7 @@ const prices = [
   
     // Ellenőrzés: nincs negatív érték
     if (!workTypeId || area < 0 || count < 0 || (area === 0 && count === 0)) {
-      alert("Kérlek, adj meg érvényes és pozitív adatokat!");
+      alert("Please provide valid and positive data!");
       return;
     }
   
@@ -150,7 +150,7 @@ const prices = [
     } else if (task.unit === "m³") {
       cost = task.price * area; // Köbméter alapú számítás
     } else {
-      alert("Nem támogatott egység.");
+      alert("Unsupported unit.");
       return;
     }
   
@@ -170,7 +170,7 @@ const prices = [
   
       // Eltávolítás gomb hozzáadása
       const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Eltávolítás";
+      deleteButton.textContent = "Removal";
       deleteButton.onclick = () => removeItem(index);
       listItem.appendChild(deleteButton);
   
@@ -188,7 +188,7 @@ const prices = [
   // Végösszeg frissítése
   function updateTotalCost() {
     const total = cart.reduce((sum, item) => sum + item.cost, 0); // Teljes ár kiszámítása
-    document.getElementById("totalCost").textContent = `${total} HUF`;
+    document.getElementById("totalCost").textContent = `${total} GBP`;
   }
   
   // Oldal betöltésekor a munka típusok megjelenítése
